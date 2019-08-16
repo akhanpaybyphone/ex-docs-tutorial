@@ -3,8 +3,7 @@ language: bash
 services:
   - docker
 before_script:
-  - export APP_IMAGE=keboola-component
-  - docker build . --tag=$APP_IMAGE
+  - docker build . --tag=my-component
 after_success:
   - docker images
 deploy:
